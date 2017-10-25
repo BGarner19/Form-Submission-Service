@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+	Construct by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>National Kidney Foundation of Arizona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />		
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header class="major">
+                    <h1>National Kidney Foundation of Arizona</h1>
+				</header>
+			</section>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+
+						<section id="one" class="special">
+							<header class="major">
+                                <h2>Thank You!</h2>
+							</header>
+							<form action="{{url_for('returnHome') }}" method="post">
+                                <table>
+                                    <tr>
+                                        <td>
+                                             <h2>Your form has been sucessfully submitted.</h2>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="Go Home" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                    </section>
+                </div>
+            </section>
+            
+        <!-- Scripts -->
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<!--
+	Construct by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>National Kidney Foundation of Arizona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{{ url_for('static', filename='assets/js/ie/html5shiv.js') }}"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ie9.css') }}" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header class="major">
+                    <h1>National Kidney Foundation of Arizona</h1>
+				</header>
+			</section>
+
+		<!-- Main -->
+            <section id="main" class="wrapper">
+                <div class="inner">
+                    <section id="one" class="special">
+                        <header class="major">
+                            <h2>Form Selection</h2>
+                        </header>
+                        <form name="formsToFill" id="formsToFill" onsubmit='makePath(this);'>
+                            <table>
+                                <tr>
+                                    <td><h4>Please Choose A Form To Complete:</h4></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="forms" id="forms" autofocus="autofocus" form="formsToFill" required="required" style="width:100%">
+                                            <option id = "1" value="transportation">Transportation Application</option>
+                                            <option id = "2" value="medications">Medications Application</option>
+                                            <option id = "3" value="financial">Financial Application</option>
+                                            <option id = "4" value="carPayment">Car Payment / Repair Consent</option>
+                                            <option id = "4" value="dental">Dental Application</option>
+                                            <option id = "6" value="transplantMedications">Transplant Medications Application</option>
+                                            <option id = "7" value="renalRegistry">Renal Registry</option>
+                                            <option id = "8" value="rentConsent">Rent Consent</option>
+                                            <option id = "9" value="scholarship">Scholarship Application</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Continue" class="special" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </section>
+                </div>
+            </section>
+        
+        <!-- Scripts -->
+        <script type="text/javascript">
+
+            var makePath = function(form) {
+                form.action = document.getElementById('forms').value;
+            };
+            
+        </script>
+        <script src="{{url_for('static', filename='assets/js/script.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+        <!--[if lte IE 8]><script src="{{url_for('static', filename='assets/js/ie/respond.min.js')}}"></script><![endif]-->
+        <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+            
+    </body>
+</html>

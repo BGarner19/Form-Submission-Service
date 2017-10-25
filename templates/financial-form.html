@@ -1,0 +1,799 @@
+<!DOCTYPE HTML>
+<!--
+	Construct by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>National Kidney Foundation of Arizona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{{ url_for('static', filename='assets/js/ie/html5shiv.js') }}"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ie9.css') }}" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header class="major">
+                    <h1>National Kidney Foundation of Arizona</h1>
+				</header>
+			</section>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+
+						<section id="one" class="special">
+							<header class="major">
+                                <h2>Financial Application</h2>
+							</header>
+							<form action="{{url_for('financialFormSubmit') }}" method="post">
+                                <table>
+                                    <tr>
+                                        <td colspan=2><h4>Patient's Name:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" /></td>
+                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" /></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Date of Birth:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month">
+                                            <select name="dob-month" id="dob-month">
+                                                <option value="">Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </td>
+                                        <td class="day">
+                                            <select name="dob-day" id="dob-day">
+                                                <option value="">Day</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </td>
+                                        <td class="year">
+                                            <input type="text" name="dob-year" id="dob-year" value="" placeholder="Year" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=2><h4>Spouse's Name:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="spouse-firstname" id="spouse-firstname" value="" placeholder="First Name" /></td>
+                                        <td><input type="text" name="spouse-lastname" id="spouse-lastname" value="" placeholder="Last Name" /></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Spouse's Date of Birth:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month">
+                                            <select name="spouse-dob-month" id="spouse-dob-month">
+                                                <option value="">Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </td>
+                                        <td class="day">
+                                            <select name="spouse-dob-day" id="spouse-dob-day">
+                                                <option value="">Day</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </td>
+                                        <td class="year">
+                                            <input type="text" name="spouse-dob-year" id="spouse-dob-year" value="" placeholder="Year" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Address:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=3>
+                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Phone Number:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="Phone Number" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Demographic Information:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <input type="radio" id="demographic-white" name="demographic" value="white" />
+                                            <label for="demographic-white">White</label>
+                                            <input type="radio" id="demographic-black" name="demographic" value="black" />
+                                            <label for="demographic-black">Black</label>
+                                            <input type="radio" id="demographic-asian" name="demographic" value="asian" />
+                                            <label for="demographic-asian">Asian</label>
+                                            <input type="radio" id="demographic-americanindian" name="demographic" value="americanindian" />
+                                            <label for="demographic-americanindian">American Indian</label>
+                                            <input type="radio" id="demographic-hispanic" name="demographic" value="hispanic" />
+                                            <label for="demographic-hispanic">Hispanic</label>
+                                            <input type="radio" id="demographic-other" name="demographic" value="other" />
+                                            <label for="demographic-other">Other</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <header class="major">
+                                    <h2>Family Members</h2>    
+                                </header>
+                                <div id="family1"></div>
+                                <div id="family2"></div>
+                                <div id="family3"></div>
+                                <div id="family4"></div>
+                                <div id="family5"></div>
+                                <div id="family6"></div>
+                                <div id="family7"></div>
+                                <div id="family8"></div>
+                                <div id="family9"></div>
+                                <div id="family-entry">
+                                    <table>
+                                        <tr>
+                                            <td colspan=2><h4>Family Member's Name:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="family-firstname" id="family-firstname" value="" placeholder="First Name" /></td>
+                                            <td><input type="text" name="family-lastname" id="family-lastname" value="" placeholder="Last Name" /></td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td colspan=3><h4>Family Member's Date of Birth:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="month">
+                                                <select name="family-dob-month" id="family-dob-month">
+                                                    <option value="">Month</option>
+                                                    <option value="01">January</option>
+                                                    <option value="02">February</option>
+                                                    <option value="03">March</option>
+                                                    <option value="04">April</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">June</option>
+                                                    <option value="07">July</option>
+                                                    <option value="08">August</option>
+                                                    <option value="09">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                            </td>
+                                            <td class="day">
+                                                <select name="family-dob-day" id="family-dob-day">
+                                                    <option value="">Day</option>
+                                                    <option value="01">1</option>
+                                                    <option value="02">2</option>
+                                                    <option value="03">3</option>
+                                                    <option value="04">4</option>
+                                                    <option value="05">5</option>
+                                                    <option value="06">6</option>
+                                                    <option value="07">7</option>
+                                                    <option value="08">8</option>
+                                                    <option value="09">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </td>
+                                            <td class="year">
+                                                <input type="text" name="family-dob-year" id="family-dob-year" value="" placeholder="Year" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td><h4>Relationship to Patient:</h4></td>
+                                            <td><h4>Employer:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="family-relationship" id="family-relationship" value="" placeholder="Relationship" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="family-employer" id="family-employer" value="" placeholder="Employer" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+								            <input type="button" value="Add Another Family Member" onClick="addFamily()" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <header class="major">
+                                    <h2>Monthly Household Expenses</h2> 
+                                </header>
+                                <table>
+                                    <tr>
+                                        <td><h4>Rent or Mortgage:</h4></td>
+                                        <td><h4>Food:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-rent" id="payments-rent" value="" placeholder="Rent or Mortgage" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-food" id="payments-food" value="" placeholder="Food" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Phone:</h4></td>
+                                        <td><h4>Gas:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-phone" id="payments-phone" value="" placeholder="Phone" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-naturalgas" id="payments-naturalgas" value="" placeholder="Natural Gas" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Electric:</h4></td>
+                                        <td><h4>Water:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-electric" id="payments-electric" value="" placeholder="Electric" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-water" id="payments-water" value="" placeholder="Water" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Auto Payments:</h4></td>
+                                        <td><h4>Gas and Oil:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-autopayments" id="payments-autopayments" value="" placeholder="Auto Payments" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-gasandoil" id="payments-gasandoil" value="" placeholder="Gas and Oil" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Auto Insurance:</h4></td>
+                                        <td><h4>Auto Repairs:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-autoinsurance" id="payments-autoinsurance" value="" placeholder="Auto Insurance" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-autorepairs" id="payments-autorepairs" value="" placeholder="Auto Repairs" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Doctor:</h4></td>
+                                        <td><h4>Hospital:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-doctor" id="payments-doctor" value="" placeholder="Doctor" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-hospital" id="payments-hospital" value="" placeholder="Hospital" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Medicines:</h4></td>
+                                        <td><h4>Life Insurance:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-medicines" id="payments-medicines" value="" placeholder="Medicines" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-lifeinsurance" id="payments-lifeinsurance" value="" placeholder="Life Insurance" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Medical Insurance:</h4></td>
+                                        <td><h4>Total Loan Payments:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-medicalinsurance" id="payments-medicalinsurance" value="" placeholder="Medical Insurance" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="payments-totalloans" id="payments-totalloans" value="" placeholder="Total Loan Payments" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Total Monthly Expenses:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="payments-total" id="payments-total" value="" placeholder="Total Monthly Expenses" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <header class="major">
+                                    <h2>Monthly Household Income</h2> 
+                                </header>
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Patient</th>
+                                        <th>Spouse</th>
+                                        <th>Other</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Employment (Net):</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-employment" name="income-patient-employment">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-employment" name="income-patient-employment">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-employment" name="income-patient-employment">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Social Security Disability:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-socialsecurity" name="income-patient-socialsecurity">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-socialsecurity" name="income-patient-socialsecurity">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-socialsecurity" name="income-patient-socialsecurity">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>SSI:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-ssi" name="income-patient-ssi">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-ssi" name="income-patient-ssi">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-ssi" name="income-patient-ssi">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>ADC:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-adc" name="income-patient-adc">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-adc" name="income-patient-adc">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-adc" name="income-patient-adc">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Food Stamps:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-foodstamps" name="income-patient-foodstamps">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-foodstamps" name="income-patient-foodstamps">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-foodstamps" name="income-patient-foodstamps">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Other:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-other" name="income-patient-other">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-other" name="income-patient-other">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-other" name="income-patient-other">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Subtotal:</h4>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-patient-subtotal" name="income-patient-subtotal">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-spouse-subtotal" name="income-patient-subtotal">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="income-other-subtotal" name="income-patient-subtotal">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Total Monthly Income:</h4>
+                                        </td>
+                                        <td></td><td></td>
+                                        <td>
+                                            <input type="text" id="income-total" name="income-total">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <header class="major">
+                                    <h2>Health Insurance Information</h2> 
+                                </header>
+                                <table>
+                                    <tr>
+                                        <td><h4>Private Health Insurance Information:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea type="message" name="insurance" id="insurance" value="" placeholder="Description"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>AHCCCS:</h4></td></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="ahcccs" id="ahcccs" value="" placeholder="AHCCCS" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>AHCCCS Expiration Date:</h4></td></tr>
+                                    <tr>
+                                        <td class="month">
+                                            <select name="ahcccsexpiration-month" id="ahcccsexpiration-month">
+                                                <option value="">Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </td>
+                                        <td class="day">
+                                            <select name="ahcccsexpiration-day" id="ahcccsexpiration-day">
+                                                <option value="">Day</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </td>
+                                        <td class="year">
+                                            <input type="text" name="ahcccsexpirationd-year" id="ahcccsexpiration-year" value="" placeholder="Year" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>VA Coverage</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="float:left">
+                                            <input type="radio" id="vacoverage-yes" name="vacoverage" value="yes" />
+                                            <label for="vacoverage-yes">Yes</label>
+                                            <input type="radio" id="vacoverage-no" name="vacoverage" value="no"/>
+                                            <label for="vacoverage-no">No</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <header class="major">
+                                    <h2>Assets</h2> 
+                                </header>
+                                <table>
+                                    <tr>
+                                        <td><h4>Checking Balance:</h4></td>
+                                        <td><h4>Savings Balance:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="assets-checking" id="assets-checking" value="" placeholder="Balance" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="assets-savings" id="assets-savings" value="" placeholder="Balance" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Home Assesed Value:</h4></td></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="assets-home" id="assets-home" value="" placeholder="Home Value" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Auto Year:</h4></td>
+                                        <td><h4>Auto Make:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="assets-autoyear" id="assets-automake" value="" placeholder="Year" />
+                                        </td>
+                                        <td>
+                                            <input type="text" name="assets-autoyear" id="assets-automake" value="" placeholder="Make" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Other Property:</h4></td></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="assets-other" id="assets-other" value="" placeholder="(Stocks, Bonds, Real Estate, etc.)" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+								            <input type="submit" value="Submit" class="special" />
+                                        </td>
+                                    </tr>
+                                </table>
+							</form>
+                    </section>
+                </div>
+            </section>
+
+        <!-- Scripts -->  
+        <script type="text/javascript"> 
+            var index = 0;
+
+            function addFamily() {
+                
+                if (index < 9) {
+                    
+                    var family = {
+                        firstname: document.getElementById("family-firstname").value,
+                        lastname: document.getElementById("family-lastname").value,
+                        month: document.getElementById("family-dob-month").value,
+                        day: document.getElementById("family-dob-day").value,
+                        year: document.getElementById("family-dob-year").value,
+                        relationship: document.getElementById("family-relationship").value,
+                        employer: document.getElementById("family-employer").value
+                    }
+                    
+                    index++;
+
+                    var output = document.getElementById("family-entry").innerHTML.toString();
+                    var replace = "family" + index + "\-";
+                    output = output.replace(/family\-/g , replace);
+
+                    document.getElementById(("family" + index)).innerHTML = output;
+
+                    // Refill input
+                    document.getElementById(replace + "firstname").value = family.firstname;
+                    document.getElementById(replace + "lastname").value = family.lastname;
+                    document.getElementById(replace + "dob-month").value = family.month;
+                    document.getElementById(replace + "dob-day").value = family.day;
+                    document.getElementById(replace + "dob-year").value = family.year;
+                    document.getElementById(replace + "relationship").value = family.relationship;
+                    document.getElementById(replace + "employer").value = family.employer;
+
+                    // Reset Input
+                    document.getElementById("family-firstname").value = "";
+                    document.getElementById("family-lastname").value = "";
+                    document.getElementById("family-dob-month").value = "";
+                    document.getElementById("family-dob-day").value = "";
+                    document.getElementById("family-dob-year").value = "";
+                    document.getElementById("family-relationship").value = "";
+                    document.getElementById("family-employer").value = "";
+                }
+            }
+            
+        </script>
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+        <!--[if lte IE 8]><script src="{{url_for('static', filename='assets/js/ie/respond.min.js')}}"></script><![endif]-->
+        <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+    </body>
+</html>

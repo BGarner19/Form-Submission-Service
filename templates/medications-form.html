@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<!--
+	Construct by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>National Kidney Foundation of Arizona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{{ url_for('static', filename='assets/js/ie/html5shiv.js') }}"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ie9.css') }}" /><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header class="major">
+                    <h1>National Kidney Foundation of Arizona</h1>
+				</header>
+			</section>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+
+						<section id="one" class="special">
+							<header class="major">
+                                <h2>Medications Application</h2>
+							</header>
+							<form action="{{url_for('medicationsFormSubmit') }}" method="post">
+                                <table>
+                                    <tr>
+                                        <td colspan=2><h4>Name:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" required/></td>
+                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" required/></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Date of Birth:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month">
+                                            <select name="dob-month" id="dob-month" required>
+                                                <option value="">Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </td>
+                                        <td class="day">
+                                            <select name="dob-day" id="dob-day" required>
+                                                <option value="">Day</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </td>
+                                        <td class="year">
+                                            <input type="text" name="dob-year" id="dob-year" value="" placeholder="Year" max="9999" min="1900" required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Phone Number:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="Phone Number" minlength = '10' maxlength='11' required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Address:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=3>
+                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" required/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" required/>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" required/>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Treatment Facility:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="treatmentfacility" id="treatmentfacility" value="" placeholder="Facility Name" required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Social Worker:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="socialworker" id="socialworker" value="" placeholder="Social Worker's Name" required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td><h4>Current Patient Financial Information on File?</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="float:left">
+                                            <input type="radio" id="financialonfile-yes" name="financialonfile" value="yes" required/>
+                                            <label for="financialonfile-yes">Yes</label>
+                                            <input type="radio" id="financialonfile-no" name="financialonfile" value="no" required/>
+                                            <label for="financialonfile-no">No</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td colspan=3><h4>Date of Transplant:</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month">
+                                            <select name="transplant-month" id="transplant-month" required>
+                                                <option value="">Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </td>
+                                        <td class="day">
+                                            <select name="transplant-day" id="transplant-day" required>
+                                                <option value="">Day</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </td>
+                                        <td class="year">
+                                            <input type="text" name="transplant-year" id="transplant-year" value="" placeholder="Year" required/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/><br/>
+                                <header class="major">
+                                    <h2>Medications</h2>    
+                                </header>
+                                <div id="medication1"></div>
+                                <div id="medication2"></div>
+                                <div id="medication3"></div>
+                                <div id="medication4"></div>
+                                <div id="medication5"></div>
+                                <div id="medication6"></div>
+                                <div id="medication7"></div>
+                                <div id="medication8"></div>
+                                <div id="medication9"></div>
+                                <div id="medication-entry">
+                                    <table>
+                                        <tr>
+                                            <td><h4>Medication Name:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="medication-name" id="medication-name" value="" placeholder="Medication Name" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td><h4>Dosage:</h4></td>
+                                            <td><h4>Quantity:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="medication-dosage" id="medication-dosage" value="" placeholder="Dosage" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="medication-quantity" id="medication-quantity" value="" placeholder="Quantity" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td><h4>Prescribing Physician:</h4></td></tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="medication-physician" id="medication-physician" value="" placeholder="Physician's Name" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td colspan=3><h4>Pharmaceutical Company Date Applied:</h4></td></tr>
+                                        <tr>
+                                            <td class="month">
+                                                <select name="medication-dateapplied-month" id="medication-dateapplied-month">
+                                                    <option value="">Month</option>
+                                                    <option value="01">January</option>
+                                                    <option value="02">February</option>
+                                                    <option value="03">March</option>
+                                                    <option value="04">April</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">June</option>
+                                                    <option value="07">July</option>
+                                                    <option value="08">August</option>
+                                                    <option value="09">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                            </td>
+                                            <td class="day">
+                                                <select name="medication-dateapplied-day" id="medication-dateapplied-day">
+                                                    <option value="">Day</option>
+                                                    <option value="01">1</option>
+                                                    <option value="02">2</option>
+                                                    <option value="03">3</option>
+                                                    <option value="04">4</option>
+                                                    <option value="05">5</option>
+                                                    <option value="06">6</option>
+                                                    <option value="07">7</option>
+                                                    <option value="08">8</option>
+                                                    <option value="09">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </td>
+                                            <td class="year">
+                                                <input type="text" name="medication-dateapplied-year" id="medication-dateapplied-year" value="" placeholder="Year" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td style="width: 30%"><h4>Refills:</h4></td>
+                                            <td style="width: 40%"><h4>Status:</h4></td>
+                                            <td style="width: 30%"><h4>Covered:</h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left">
+                                                <input type="radio" id="medication-refills-yes" name="medication-refills" value="yes" />
+                                                <label for="medication-refills-yes">Yes</label>
+                                                <input type="radio" id="medication-refills-no" name="medication-refills" value="no" />
+                                                <label for="medication-refills-no">No</label>
+                                            </td>
+                                            <td style="text-align: left">
+                                                <input type="radio" id="medication-status-pending" name="medication-status" value="pending" />
+                                                <label for="medication-status-pending">Pending</label>
+                                                <input type="radio" id="medication-status-accepted" name="medication-status" value="accepted" />
+                                                <label for="medication-status-accepted">Accepted</label>
+                                                <input type="radio" id="medication-status-denied" name="medication-status" value="denied" />
+                                                <label for="medication-status-denied">Denied</label>
+                                            </td>
+                                            <td style="text-align: left">
+                                                <input type="radio" id="medication-covered-yes" name="medication-covered" value="yes" />
+                                                <label for="medication-covered-yes">Yes</label>
+                                                <input type="radio" id="medication-covered-no" name="medication-covered" value="no" />
+                                                <label for="medication-covered-no">No</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="button" value="Add Another Medication" onClick="addMedication()" />
+								            <input type="submit" value="Submit" class="special" />
+                                        </td>
+                                    </tr>
+                                </table>
+							</form>
+                    </section>
+                </div>
+            </section>
+
+        <!-- Scripts -->
+        <script type="text/javascript">
+            var index = 0;
+            
+            function addMedication() {
+                
+                if (index < 9) {
+                
+                    var medication = {
+                         name: document.getElementById("medication-name").value,
+                         dosage: document.getElementById("medication-dosage").value,
+                         quantity: document.getElementById("medication-quantity").value,
+                         physician: document.getElementById("medication-physician").value,
+                         month: document.getElementById("medication-dateapplied-month").value,
+                         day: document.getElementById("medication-dateapplied-day").value,
+                         year: document.getElementById("medication-dateapplied-year").value,
+                         refills: "",
+                         status: "",
+                         covered: ""
+                     }
+
+                     if (document.getElementById("medication-refills-yes").checked == true) {
+                         medication.refills = "yes";
+                     } else if (document.getElementById("medication-refills-no").checked == true) {
+                         medication.refills = "no";
+                     }
+
+                     if (document.getElementById("medication-status-pending").checked == true) {
+                         medication.status = "pending";
+                     } else if (document.getElementById("medication-status-accepted").checked == true) {
+                         medication.status = "accepted";
+                     } else if (document.getElementById("medication-status-denied").checked == true) {
+                         medication.status = "denied";
+                     }
+
+                     if (document.getElementById("medication-covered-yes").checked == true) {
+                         medication.covered = "yes";
+                     } else if (document.getElementById("medication-covered-no").checked == true) {
+                         medication.covered = "no";
+                     }
+
+                     index++;
+
+                     var output = document.getElementById("medication-entry").innerHTML.toString();
+                     var replace = "medication" + index + "\-";
+                     output = output.replace(/medication\-/g , replace);
+
+                     document.getElementById(("medication" + index)).innerHTML = output;
+
+
+                     // Refill input
+                     document.getElementById(replace + "name").value = medication.name;
+                     document.getElementById(replace + "dosage").value = medication.dosage;
+                     document.getElementById(replace + "quantity").value = medication.quantity;
+                     document.getElementById(replace + "physician").value = medication.physician;
+                     document.getElementById(replace + "dateapplied-month").value = medication.month;
+                     document.getElementById(replace + "dateapplied-day").value = medication.day;
+                     document.getElementById(replace + "dateapplied-year").value = medication.year;
+                     if (medication.refills == "yes") {
+                         document.getElementById(replace + "refills-yes").checked = true;
+                     } else if (medication.refills == "no"){
+                         document.getElementById(replace + "refills-no").checked = true;
+                     }
+                     if (medication.status == "pending") {
+                         document.getElementById(replace + "status-pending").checked = true;
+                     } else if (medication.status == "accepted") {
+                         document.getElementById(replace + "status-accepted").checked = true;
+                     } else if (medication.status == "denied") {
+                         document.getElementById(replace + "status-denied").checked = true;
+                     }
+                     if (medication.covered == "yes") {
+                         document.getElementById(replace + "covered-yes").checked = true;
+                     } else if (medication.covered == "no") {
+                         document.getElementById(replace + "covered-no").checked = true;
+                     }
+
+                     // Reset Input
+                     document.getElementById("medication-name").value = "";
+                     document.getElementById("medication-dosage").value = "";
+                     document.getElementById("medication-quantity").value = "";
+                     document.getElementById("medication-physician").value = "";
+                     document.getElementById("medication-dateapplied-month").value = "";
+                     document.getElementById("medication-dateapplied-day").value = "";
+                     document.getElementById("medication-dateapplied-year").value = "";
+                     document.getElementById("medication-refills-yes").checked = false;
+                     document.getElementById("medication-refills-no").checked = false;
+                     document.getElementById("medication-status-pending").checked = false;
+                     document.getElementById("medication-status-accepted").checked = false;
+                     document.getElementById("medication-status-denied").checked = false;
+                     document.getElementById("medication-covered-yes").checked = false;
+                     document.getElementById("medication-covered-no").checked = false;
+                }
+            }
+          
+        </script>
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+        <!--[if lte IE 8]><script src="{{url_for('static', filename='assets/js/ie/respond.min.js')}}"></script><![endif]-->
+        <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+    </body>
+</html>
