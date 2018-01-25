@@ -38,9 +38,9 @@ Our system is currently deployed on an Ubuntu server hosted by Digital Ocean; ho
 
 ## Authors
 
-Bailey Garner
-Trevor Sharp
-Nate Unruh
-John Nguyen
-Scott Weston
+* Bailey Garner
+* Trevor Sharp
+* Nate Unruh
+* John Nguyen
+* Scott Weston
 
