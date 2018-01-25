@@ -38,5 +38,9 @@ Our system is currently deployed on an Ubuntu server hosted by Digital Ocean; ho
 
 ## Authors
 
-See the list of [contributors](https://github.com/2017-Arizona-Opportunity-Hack/Team14/graphs/contributors) who participated in this project.
+Bailey Garner
+Trevor Sharp
+Nate Unruh
+John Nguyen
+Scott Weston
 
